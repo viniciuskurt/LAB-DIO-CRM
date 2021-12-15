@@ -31,6 +31,28 @@
   <body class="d-flex flex-column">
     <header>{% include "model-header.html" %}</header>
 
-    {% block content %} {% endblock %}
+    <main class="content" style="margin-top: 5%">
+      <div class="container">{% block content %} {% endblock %}</div>
+    </main>
+
+    <footer class="py-4 bg-dark text-white-50">
+      {% include "model-footer.html" %}
+    </footer>
   </body>
+
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    main {
+      flex: 1 0 auto;
+    }
+
+    footer {
+      flex-shrink: none;
+      margin-top: 2em;
+    }
+  </style>
 </html>
